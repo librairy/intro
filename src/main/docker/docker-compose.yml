@@ -1,0 +1,20 @@
+version: "2"
+services:
+ explorer:
+   container_name: intro
+   image: librairy/intro:latest
+   expose:
+     - "8888"
+   ports:
+     - "0.0.0.0:8888:8888"
+   external_links:
+     - column-db
+     - document-db
+     - graph-db
+     - event-bus
+   networks:
+     - "lnet"
+networks:
+  lnet:
+    external:
+      name: distribution_lnet
