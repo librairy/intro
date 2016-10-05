@@ -38,4 +38,50 @@
         </developer>
     </developers>
 
+    <repositories>
+
+        <!-- Librairy Boot Repository -->
+        <repository>
+            <id>librairy-boot-repo</id>
+            <url>https://raw.github.com/librairy/boot/mvn-repo/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+
+    </repositories>
+
+    <properties>
+        <librairy.boot.version>0.21</librairy.boot.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Internal Dependencies -->
+        <dependency>
+            <groupId>org.librairy</groupId>
+            <artifactId>librairy-boot</artifactId>
+            <version>${librairy.boot.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- librairy boot dependencyManagement -->
+            <dependency>
+                <groupId>org.librairy</groupId>
+                <artifactId>librairy-boot</artifactId>
+                <version>${librairy.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
 </project>
