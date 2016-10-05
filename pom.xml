@@ -53,7 +53,7 @@
     </repositories>
 
     <properties>
-        <librairy.boot.version>0.21</librairy.boot.version>
+        <librairy.boot.version>0.22</librairy.boot.version>
         <junit.version>4.12</junit.version>
         <spring.version>4.2.7.RELEASE</spring.version>
         <testutils.version>1.0.0</testutils.version>
