@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 /**
  * @author Badenes Olmedo, Carlos <cbadenes@fi.upm.es>
  */
-@Configuration("org.librairy.intro")
+@Configuration("org.librairy.harvester.intro")
 @ComponentScan({"org.librairy"})
 @PropertySource({"classpath:boot.properties"})
 public class Config {

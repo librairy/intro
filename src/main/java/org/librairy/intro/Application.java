@@ -15,6 +15,8 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory
 import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
@@ -23,11 +25,13 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
  * @author cbadenes
  */
 @SpringBootApplication
+@ComponentScan({"org.librairy"})
+@PropertySource({"classpath:boot.properties"})
 public class Application {
 
     private static final Logger LOG = LoggerFactory.getLogger(Application.class);
 
-    static int port = 80;
+    static int port = 8888;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
