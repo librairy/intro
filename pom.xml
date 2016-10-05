@@ -63,18 +63,19 @@
 
         <dependencies>
 
-            <!-- librairy boot dependencyManagement -->
+            <!-- librairy boot dependency -->
+            <dependency>
+                <groupId>org.librairy</groupId>
+                <artifactId>librairy-boot</artifactId>
+                <version>${librairy.boot.version}</version>
+            </dependency>
+            <!-- librairy boot transitive-dependencies -->
             <dependency>
                 <groupId>org.librairy</groupId>
                 <artifactId>librairy-boot</artifactId>
                 <version>${librairy.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.librairy</groupId>
-                <artifactId>librairy-boot</artifactId>
-                <version>${librairy.boot.version}</version>
             </dependency>
 
             <!-- Unit tests Libraries -->
