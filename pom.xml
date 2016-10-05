@@ -9,7 +9,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.librairy</groupId>
+    <groupId>org.librairy</groupId>
     <artifactId>librairy-intro</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -56,21 +56,17 @@
         <librairy.boot.version>0.21</librairy.boot.version>
     </properties>
 
-    <dependencies>
-
-        <!-- Internal Dependencies -->
-        <dependency>
-            <groupId>org.librairy</groupId>
-            <artifactId>librairy-boot</artifactId>
-        </dependency>
-
-    </dependencies>
-
     <dependencyManagement>
 
         <dependencies>
 
-            <!-- librairy boot dependencyManagement -->
+            <!-- librairy boot dependency -->
+            <dependency>
+                <groupId>org.librairy</groupId>
+                <artifactId>librairy-boot</artifactId>
+                <version>${librairy.boot.version}</version>
+            </dependency>
+            <!-- librairy boot transitive-dependencies -->
             <dependency>
                 <groupId>org.librairy</groupId>
                 <artifactId>librairy-boot</artifactId>
@@ -82,5 +78,15 @@
         </dependencies>
 
     </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Internal Dependencies -->
+        <dependency>
+            <groupId>org.librairy</groupId>
+            <artifactId>librairy-boot</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
