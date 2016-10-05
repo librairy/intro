@@ -12,6 +12,8 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.librairy.model.domain.resources.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
@@ -33,6 +35,7 @@ import java.util.List;
 })
 public class ReaderTest {
 
+    private static final Logger LOG = LoggerFactory.getLogger(ReaderTest.class);
 
     @Autowired
     Reader reader;
@@ -41,7 +44,7 @@ public class ReaderTest {
     public void readAllDocuments(){
         List<Resource> docs = reader.getAllDocuments();
 
-        System.out.println("Documents from librairy:" + docs);
+        LOG.info("Documents from librairy:" + docs);
     }
 
 
