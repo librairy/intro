@@ -62,7 +62,6 @@
         <dependency>
             <groupId>org.librairy</groupId>
             <artifactId>librairy-boot</artifactId>
-            <version>${librairy.boot.version}</version>
         </dependency>
 
     </dependencies>
