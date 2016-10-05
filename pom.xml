@@ -54,17 +54,10 @@
 
     <properties>
         <librairy.boot.version>0.21</librairy.boot.version>
+        <junit.version>4.12</junit.version>
+        <spring.version>4.2.7.RELEASE</spring.version>
+        <testutils.version>1.0.0</testutils.version>
     </properties>
-
-    <dependencies>
-
-        <!-- Internal Dependencies -->
-        <dependency>
-            <groupId>org.librairy</groupId>
-            <artifactId>librairy-boot</artifactId>
-        </dependency>
-
-    </dependencies>
 
     <dependencyManagement>
 
@@ -78,9 +71,55 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.librairy</groupId>
+                <artifactId>librairy-boot</artifactId>
+                <version>${librairy.boot.version}</version>
+            </dependency>
+
+            <!-- Unit tests Libraries -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>es.cbadenes.lab</groupId>
+                <artifactId>test-utils</artifactId>
+                <version>${testutils.version}</version>
+            </dependency>
 
         </dependencies>
 
     </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Internal Dependencies -->
+        <dependency>
+            <groupId>org.librairy</groupId>
+            <artifactId>librairy-boot</artifactId>
+        </dependency>
+
+        <!-- Unit tests Libraries -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>es.cbadenes.lab</groupId>
+            <artifactId>test-utils</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
