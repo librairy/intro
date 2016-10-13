@@ -13,7 +13,7 @@
     <artifactId>librairy-intro</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>librairy intro</name>
+    <name>intro</name>
     <description>librairy introduction</description>
     <url>https://github.com/librairy/intro</url>
     <organization>
@@ -205,6 +205,13 @@
                     <excludedGroups>es.cbadenes.lab.test.IntegrationTest</excludedGroups>
                 </configuration>
             </plugin>
+
+            <!-- Spring-Boot Unique Jar -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
         </plugins>
     </build>
 
