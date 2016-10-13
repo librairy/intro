@@ -9,7 +9,7 @@
 <configuration scan="true" scanPeriod="30 seconds">
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LIBRAIRY_HOME}/logs/intro.log</file>
+        <file>logs/intro.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily -->
             <fileNamePattern>logs/intro-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
