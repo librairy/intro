@@ -53,6 +53,12 @@
     </repositories>
 
     <properties>
+        <!-- Project Details -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.java.version>1.8</project.java.version>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+
         <librairy.boot.version>0.28</librairy.boot.version>
         <junit.version>4.12</junit.version>
         <spring.version>4.2.7.RELEASE</spring.version>
@@ -125,6 +131,19 @@
 
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${project.java.version}</source>
+                    <target>${project.java.version}</target>
+                    <compilerVersion>${project.java.version}</compilerVersion>
+                </configuration>
+            </plugin>
+
             <!-- Maven Test Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
